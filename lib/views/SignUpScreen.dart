@@ -142,13 +142,16 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 //     id: id!,
                                 //   ),
                                 // );
+
+                                Navigator.of(context).pushNamedAndRemoveUntil(
+                                    "home_page", (routes) => false);
                               }
                               emailController.clear();
                               passwordController.clear();
                               usernameController.clear();
-                              username = null;
                               email = null;
                               password = null;
+                              username = null;
                             },
                             child: Text("Sign Up"),
                           ),
